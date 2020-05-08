@@ -37,10 +37,10 @@ $rightButton.addEventListener("click", function(){
 let $boxes = document.querySelectorAll(".box");
 
 for(let i = 0; i < $boxes.length; i++) {
-    $boxes[i].addEventListener("click", function(event){
+    $boxes[i].addEventListener("click", function(e){
         debugger
         let $boxContainer = document.querySelector(".box-container");
-        $boxContainer.removeChild(event.currentTarget);
+        $boxContainer.removeChild(e.currentTarget);
         // event.currentTarget.style.backgroundColor = "yellow";
         
     })
@@ -58,3 +58,11 @@ $playerButton.addEventListener("click", function(){
 
     document.querySelector("body").appendChild($h1);
 })
+
+let $stories = document.querySelectorAll(".stories");
+
+for(let i =0; i< $stories.length; i++){
+    $stories[i].addEventListener("click", function(event){
+        alert(event.currentTarget.innerHTML);
+    })
+}
